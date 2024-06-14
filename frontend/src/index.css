@@ -1,0 +1,8 @@
+:root{
+    font-family: Inter, system-ui, Avenir, Arial, Helvetica, sans-serif;
+}
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}

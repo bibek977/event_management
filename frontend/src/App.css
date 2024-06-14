@@ -1,0 +1,37 @@
+.loginBackground{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+.loginBox{
+    background-color: white;
+    height: 70%;
+    width: 30%;
+    padding: 20px;
+    min-width: 300px;
+    border: 1px solid black;
+}
+
+.itemBox, .signupBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+}
+.signupBox{
+    height: 70px;
+}
+
+.loginTitle {
+    font-size: 30px;
+    color: #333;
+}
+
+.loginInput{
+    width: 100%;
+}
