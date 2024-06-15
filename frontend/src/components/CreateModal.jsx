@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import AxiosInstance from './AxiosInstance';
+import { useEffect } from 'react'
 
 const CreateModal = (props) => {
   const {setOpen} = props
@@ -27,13 +28,15 @@ const CreateModal = (props) => {
         created_by: user
       })
       .then(()=>{
-        // navigate(`/`)
         setOpen(false)
+        navigate(`/home`)
       })
   }
+  useEffect(()=>{
+  },[setOpen])
 
   return (
-    <div className='loginBackground'>
+    <div className=''>
 
       <form onSubmit={handleSubmit(submission)}>
 

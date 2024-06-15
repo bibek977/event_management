@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Textfield from './forms/Textfield'
 import Passwordfield from './forms/Passwordfield'
 import LoginButton from './forms/LoginButton'
@@ -36,13 +36,16 @@ const EditModal = (props) => {
         id: initData.id
       })
       .then(()=>{
-        // navigate(`/`)
         setEditOpen(false)
+        navigate(`/home`)
       })
   }
+  useEffect(()=>{
+    
+  },[setEditOpen])
 
   return (
-    <div className='loginBackground'>
+    <div className=''>
 
       <form onSubmit={handleSubmit(submission)}>
 

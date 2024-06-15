@@ -1,57 +1,13 @@
 [
     {
-        "title": "test event",
-        "description": "just a edit form details",
-        "date": "2024-06-13",
-        "end": "2024-06-15",
-        "participants": 9,
-        "created_by": "leomessi161743@gmail.com",
-        "created": "2024-06-15 09:24:22.191288",
-        "modified": "2024-06-15 12:36:12.580452",
-        "id": 1
-    },
-    {
-        "title": "College Program",
-        "description": "A conference about the latest trends in technology.",
-        "date": "2024-06-01",
-        "end": "2024-06-03",
-        "participants": 16,
-        "created_by": "leomessi161743@gmail.com",
-        "created": "2024-06-15 09:24:55.801294",
-        "modified": "2024-06-15 12:31:13.797868",
-        "id": 2
-    },
-    {
-        "title": "Welcome Program",
-        "description": "For all students",
-        "date": "2024-06-05",
-        "end": "2024-06-09",
-        "participants": 5,
-        "created_by": "leomessi161743@gmail.com",
-        "created": "2024-06-15 11:28:20.550032",
-        "modified": "2024-06-15 12:31:50.521297",
-        "id": 3
-    },
-    {
         "title": "Sports Week",
-        "description": "seminar",
-        "date": "2024-07-12",
-        "end": "2024-07-14",
-        "participants": 4,
+        "description": "All type of sports all starting",
+        "date": "2024-06-15",
+        "end": "2024-06-23",
+        "participants": 199,
         "created_by": "leomessi161743@gmail.com",
-        "created": "2024-06-15 11:43:22.634695",
-        "modified": "2024-06-15 12:33:21.771758",
-        "id": 4
-    },
-    {
-        "title": "seminar",
-        "description": "seminar",
-        "date": "2024-09-11",
-        "end": "2025-01-12",
-        "participants": 3,
-        "created_by": "leomessi161743@gmail.com",
-        "created": "2024-06-15 11:51:37.626506",
-        "modified": "2024-06-15 11:51:37.626512",
-        "id": 5
+        "created": "2024-06-15 15:18:20.595214",
+        "modified": "2024-06-15 15:18:20.595218",
+        "id": 1
     }
 ]

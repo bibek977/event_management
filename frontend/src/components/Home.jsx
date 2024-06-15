@@ -11,6 +11,8 @@ import { useState } from 'react';
 import CreateModal from './CreateModal';
 import EditModal from './EditModal';
 import AxiosInstance from './AxiosInstance';
+import { useNavigate } from "react-router-dom";
+import { useEffect } from 'react';
 
 const style = {
   position: 'absolute',
@@ -25,6 +27,7 @@ const style = {
 };
 
 export default function Home() {
+  const navigate = useNavigate()
   const [initData,setData] = useState({}) 
 
   const [open, setOpen] = useState(false);
@@ -46,9 +49,18 @@ export default function Home() {
       setEvent(res.data.data)
     })
     }
-    React.useEffect(()=>{
-        getData()
-      },[])
+
+
+  const handleDelete = (e)=>{
+    AxiosInstance.delete(`api/${e.id}`)
+    .then((res)=>{
+      navigate(`/home`)
+    })
+    }
+    useEffect(()=>{
+      getData()
+    },[handleDelete])
+
       
   return (
     <div>
@@ -87,8 +99,9 @@ export default function Home() {
           <b>created_by : <i> {e.created_by}</i></b>
         </AccordionDetails>
 
-        <AccordionDetails>
-          <Button variant="contained" onClick={() => handleEdit(e)} >Edit</Button>
+        <AccordionDetails sx={{display:'flex',justifyContent:"space-between"}}> 
+          <Button variant="contained" color='success' onClick={() => handleEdit(e)} >Edit</Button>
+          <Button variant="contained" onClick={() => handleDelete(e)} color='primary'>Delete</Button>
         </AccordionDetails>
 
       </Accordion>
