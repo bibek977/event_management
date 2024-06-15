@@ -28,8 +28,8 @@ const App = () => {
           content = {
             <Routes>
               <Route element={<ProtectedRoutes/>}>
-                  <Route path='/home' element={<Calendar></Calendar>}></Route>
-                  {/* <Route path='/calendar' element={<Calendar></Calendar>}></Route> */}
+                  <Route path='/home' element={<Home></Home>}></Route>
+                  <Route path='/calendar' element={<Calendar></Calendar>}></Route>
                   {/* <Route path='/eventlist' element={<EventList></EventList>}></Route> */}
                   <Route path='/about' element={<About></About>}></Route>
               </Route>

@@ -8,27 +8,27 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import AxiosInstance from './AxiosInstance';
 
-const Signup = () => {
+const CreateModal = (props) => {
+  const {setOpen} = props
   const navigate = useNavigate()
-  const {handleSubmit,control} = useForm({
-    defaultValues: {
-      email: '', 
-      phone:'',
-      password: '',
-      password2: '' 
-    }
-  })
+  const {handleSubmit,control} = useForm()
+
+  const user = localStorage.getItem("User")
 
   const submission = (data) =>{
     AxiosInstance.post(
-      `users/signup/`,
+      `api/`,
       {
-        email: data.email,
-        phone: data.phone,
-        password: data.password
+        title: data.title,
+        date: data.date,
+        end: data.end,
+        description: data.description,
+        participants: data.participants,
+        created_by: user
       })
       .then(()=>{
-        navigate(`/`)
+        // navigate(`/`)
+        setOpen(false)
       })
   }
 
@@ -39,25 +39,25 @@ const Signup = () => {
 
       <Box className='loginBox'>
         <Box className="signupBox">
-          <Box className='loginTitle'>Signup</Box>
+          <Box className='loginTitle'>Create Event</Box>
         </Box>
         <Box className="signupBox">
-          <Textfield label={"Email"} name={"email"} control={control} ></Textfield>
+          <Textfield label={"Title"} name={"title"} control={control} ></Textfield>
         </Box>
         <Box className="signupBox">
-          <Textfield label={"Phone"} name={"phone"} control={control} ></Textfield>
+          <Textfield label={"Start Date"} name={"date"} control={control} ></Textfield>
         </Box>
         <Box className="signupBox">
-          <Passwordfield label={"Password"} name={"password"} control={control} ></Passwordfield>
+          <Textfield label={"End Date"} name={"end"} control={control} ></Textfield>
         </Box>
         <Box className="signupBox">
-          <Passwordfield label={"Confirm Password"} name={"password2"} control={control} ></Passwordfield>
+          <Textfield label={"Description"} name={"description"} control={control} ></Textfield>
         </Box>
         <Box className="signupBox">
-          <LoginButton label={"Signup"} type={"submit"} ></LoginButton>
+          <Textfield label={"Participants"} name={"participants"} control={control} ></Textfield>
         </Box>
         <Box className="signupBox">
-          <Link to="/" > Already an account? Login now! </Link>
+          <LoginButton label={"Create"} type={"submit"} ></LoginButton>
         </Box>
       </Box>
 
@@ -67,4 +67,4 @@ const Signup = () => {
   )
 }
 
-export default Signup
+export default CreateModal

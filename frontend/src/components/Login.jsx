@@ -10,7 +10,12 @@ import AxiosInstance from './AxiosInstance';
 
 const Login = () => {
   const navigate = useNavigate()
-  const {handleSubmit,control} = useForm()
+  const {handleSubmit,control} = useForm({
+    defaultValues: {
+      email: '', 
+      password: '' 
+    }
+  })
 
   const submission = (data) =>{
     AxiosInstance.post(
@@ -20,8 +25,8 @@ const Login = () => {
         password: data.password
       })
       .then((response)=>{
-        console.log(response)
         localStorage.setItem("Token",response.data.token)
+        localStorage.setItem("User",response.data.user.email)
         navigate(`/home`)
       })
       .catch((error)=>{

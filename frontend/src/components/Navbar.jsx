@@ -17,6 +17,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import { useNavigate } from "react-router-dom";
 import AxiosInstance from './AxiosInstance';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import Avatar from '@mui/material/Avatar';
 
 const drawerWidth = 240;
 
@@ -32,17 +33,24 @@ export default function Navbar(props) {
       })
       .then(()=>{
         localStorage.removeItem("Token")
+        localStorage.removeItem("User")
         navigate("/")
       })
     }
+
+    const user = localStorage.getItem("User")
 
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
-        <Toolbar>
+        <Toolbar sx={{display:'flex',justifyContent:'space-between'}}>
           <Typography variant="h6" noWrap component="div">
             Event Management
+          </Typography>
+          <Typography variant="h6" noWrap component="div">
+            {/* <Avatar alt={user} src=""></Avatar> */}
+            {user}
           </Typography>
         </Toolbar>
       </AppBar>
@@ -67,14 +75,14 @@ export default function Navbar(props) {
                 </ListItemButton>
               </ListItem>
 
-              {/* <ListItem key={4} disablePadding>
+              <ListItem key={2} disablePadding>
                 <ListItemButton component={Link} to="/calendar" selected={"/calendar"===path}>
                   <ListItemIcon>
                     <CalendarMonthIcon />
                   </ListItemIcon>
                   <ListItemText primary={"Calendar"} />
                 </ListItemButton>
-              </ListItem> */}
+              </ListItem>
 
               {/* <ListItem key={5} disablePadding>
                 <ListItemButton component={Link} to="/eventlist" selected={"/eventlist"===path}>
@@ -85,7 +93,7 @@ export default function Navbar(props) {
                 </ListItemButton>
               </ListItem> */}
 
-              <ListItem key={2} disablePadding>
+              <ListItem key={3} disablePadding>
                 <ListItemButton component={Link} to="/about" selected={"/about"===path}>
                   <ListItemIcon>
                     <InfoIcon />
@@ -94,7 +102,7 @@ export default function Navbar(props) {
                 </ListItemButton>
               </ListItem>
 
-              <ListItem key={3} disablePadding>
+              <ListItem key={4} disablePadding>
                 <ListItemButton onClick={logoutUser}>
                   <ListItemIcon>
                     <LogoutIcon />

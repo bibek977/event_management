@@ -6,8 +6,8 @@ from datetime import datetime
 class EventSerializer(serializers.Serializer):
     title = serializers.CharField(max_length=100)
     description = serializers.CharField(max_length=250)
-    start_date = serializers.DateField()
-    end_date = serializers.DateField()
+    date = serializers.DateField()
+    end = serializers.DateField()
     participants = serializers.IntegerField()
     created_by = serializers.CharField(max_length = 50)
     created = serializers.DateTimeField(read_only=True)
