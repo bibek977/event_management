@@ -16,6 +16,7 @@ import { useLocation, Link } from 'react-router-dom';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useNavigate } from "react-router-dom";
 import AxiosInstance from './AxiosInstance';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 const drawerWidth = 240;
 
@@ -65,6 +66,24 @@ export default function Navbar(props) {
                   <ListItemText primary={"Home"} />
                 </ListItemButton>
               </ListItem>
+
+              {/* <ListItem key={4} disablePadding>
+                <ListItemButton component={Link} to="/calendar" selected={"/calendar"===path}>
+                  <ListItemIcon>
+                    <CalendarMonthIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={"Calendar"} />
+                </ListItemButton>
+              </ListItem> */}
+
+              {/* <ListItem key={5} disablePadding>
+                <ListItemButton component={Link} to="/eventlist" selected={"/eventlist"===path}>
+                  <ListItemIcon>
+                    <CalendarMonthIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={"Event List"} />
+                </ListItemButton>
+              </ListItem> */}
 
               <ListItem key={2} disablePadding>
                 <ListItemButton component={Link} to="/about" selected={"/about"===path}>

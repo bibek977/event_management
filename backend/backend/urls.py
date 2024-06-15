@@ -23,7 +23,7 @@ from knox import views as knox_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/',include("event_app.api.urls")),
+    path('api/',include("event_app.urls")),
     path('users/',include("users.urls")),
     path('api/auth/', include('knox.urls')),
     path('logout/', knox_views.LogoutView.as_view(), name='knox_logout'),

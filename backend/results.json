@@ -1,0 +1,46 @@
+[
+    {
+        "title": "Annual Conference",
+        "description": "A conference about the latest trends in technology.",
+        "start_date": "2024-07-01",
+        "end_date": "2024-07-03",
+        "participants": 10000,
+        "created_by": "bhattarai",
+        "created": "2024-06-15 06:47:41.275544",
+        "modified": "2024-06-15 06:53:08.493118",
+        "id": 1
+    },
+    {
+        "title": "Annual Conference",
+        "description": "A conference about the latest trends in technology.",
+        "start_date": "2024-07-01",
+        "end_date": "2024-07-03",
+        "participants": 10000,
+        "created_by": "bhattarai",
+        "created": "2024-06-15 06:47:51.050378",
+        "modified": "2024-06-15 06:52:53.579142",
+        "id": 2
+    },
+    {
+        "title": "Annual Conference",
+        "description": "A conference about the latest trends in technology.",
+        "start_date": "2024-07-01",
+        "end_date": "2024-07-03",
+        "participants": 10000,
+        "created_by": "admin",
+        "created": "2024-06-15 06:47:52.684182",
+        "modified": "2024-06-15 06:47:52.684189",
+        "id": 3
+    },
+    {
+        "title": "Annual Conference",
+        "description": "A conference about the latest trends in technology.",
+        "start_date": "2024-07-01",
+        "end_date": "2024-07-03",
+        "participants": 10000,
+        "created_by": "bibek",
+        "created": "2024-06-15 06:49:37.294143",
+        "modified": "2024-06-15 06:49:37.294148",
+        "id": 4
+    }
+]

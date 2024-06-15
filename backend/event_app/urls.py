@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import *
 from rest_framework.routers import DefaultRouter
+from .views import *
 
 router = DefaultRouter()
 
-urlpatterns = [
-    path('', home,name="home")
-]
+router.register("",EventViewset,basename='events')
+
+urlpatterns = router.urls
