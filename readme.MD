@@ -1,52 +1,101 @@
-Event Management Calendar App
+# Event Management Calendar App
 
-####### Instructions ############
+A calendar-based event management application with a **Django backend** and a **JavaScript frontend**. Users sign in with a custom authentication system and manage events through a calendar interface.
 
-Python is required for backend
-Node is required for frontend
+## Features
 
-############ Backend part ##############
+> Replace this list with the features you actually built, then delete this note.
 
-1. Clone this repo
-    git clone git@github.com:bibek977/event_management.git
+- Custom user authentication (`users` app)
+- [Create, edit, and delete events]
+- [Calendar view of events]
+- [Any other feature: reminders, categories, user-specific events]
 
-2. Open the project and  go inside backend folder
-    cd backend
+## Tech Stack
 
-3. Create virtual environments
-    python3 -m venv venv
-    
-    OR 
+| Layer | Tools |
+|---|---|
+| Backend | Python, Django |
+| Frontend | JavaScript, Node.js ([framework, e.g. React + Vite]) |
+| Authentication | Custom user model (Django) |
+| Database | [SQLite / PostgreSQL] |
 
-    python -m venv venv
+## Project Structure
 
-4. Install the requirements
-    pip install -r requirements.txt
+```
+event_management/
+├── backend/     # Django project (API, authentication, database models)
+├── frontend/    # JavaScript frontend
+└── readme.MD
+```
 
-5. Custom Auth is implemented So makemigrations for users
-    python manage.py makemigrations users
+## Getting Started
 
-6. Then migrate the database
-    python manage.py migrate
-    
+### Requirements
 
-############ Frontend part #############
+- Python 3.x
+- Node.js and npm
 
-7. If you inside the backend folder then exit 
-    cd ..
+### 1. Clone the repository
 
-8. Then enter into frontend folder
-    cd frontend
+```bash
+git clone https://github.com/bibek977/event_management.git
+cd event_management
+```
 
-9. Install the node modules
-    npm install
+### 2. Backend setup
 
-############# To run the project ############
+```bash
+cd backend
+python -m venv venv
+```
 
-for backend
-    cd backend
-    python manage.py runserver
+Activate the virtual environment:
 
-for frontend
-    cd frontend
-    npm run dev
+```bash
+# Windows
+venv\Scripts\activate
+
+# macOS / Linux
+source venv/bin/activate
+```
+
+Install the requirements:
+
+```bash
+pip install -r requirements.txt
+```
+
+The project uses a custom user model, so create the migrations for the `users` app first, then migrate:
+
+```bash
+python manage.py makemigrations users
+python manage.py migrate
+```
+
+### 3. Frontend setup
+
+```bash
+cd ../frontend
+npm install
+```
+
+## Running the Project
+
+Start the backend:
+
+```bash
+cd backend
+python manage.py runserver
+```
+
+Start the frontend (in a second terminal):
+
+```bash
+cd frontend
+npm run dev
+```
+
+## Author
+
+Bibek Bhattarai | [GitHub](https://github.com/bibek977) | [LinkedIn](https://www.linkedin.com/in/bibek-bhattarai-6914351a2)
